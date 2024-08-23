@@ -32,7 +32,7 @@ function App() {
     setcity(e.target.value);
   }
   let getweather = async (city) => {
-    let api = "fce6d5bfeb5f0737930e170ac0db8fe3";
+    let api = import.meta.env.VITE_API_KEY;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city} &appid=${api}&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
